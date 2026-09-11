@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://deyrf0eacmuq"]
+
+[ext_resource type="Texture2D" uid="uid://bc52y2o4i866m" path="res://Materials/Parquet_wood/English_Walnut_Parquet_udlxbgtl_2K_BaseColor.jpg" id="1_opwa3"]
+[ext_resource type="Texture2D" uid="uid://bg1tdj8uhfq2f" path="res://Materials/Parquet_wood/English_Walnut_Parquet_udlxbgtl_2K_AO.jpg" id="2_jxcvg"]
+[ext_resource type="Texture2D" uid="uid://fst27y1te76n" path="res://Materials/Parquet_wood/English_Walnut_Parquet_udlxbgtl_2K_Gloss.jpg" id="3_ht1wm"]
+[ext_resource type="Texture2D" uid="uid://dclhnk3hd0y14" path="res://Materials/Parquet_wood/English_Walnut_Parquet_udlxbgtl_2K_Bump.jpg" id="4_kqvfh"]
+[ext_resource type="Texture2D" uid="uid://owyfjbv1cqxe" path="res://Materials/Parquet_wood/English_Walnut_Parquet_udlxbgtl_2K_Normal.jpg" id="5_nkjf4"]
+[ext_resource type="Texture2D" uid="uid://c7jhetdg3cfk8" path="res://Materials/Parquet_wood/English_Walnut_Parquet_udlxbgtl_2K_Roughness.jpg" id="6_0wq5a"]
+
+[resource]
+albedo_texture = ExtResource("1_opwa3")
+roughness_texture = ExtResource("6_0wq5a")
+normal_enabled = true
+normal_scale = 12.68
+normal_texture = ExtResource("5_nkjf4")
+clearcoat_texture = ExtResource("3_ht1wm")
+ao_enabled = true
+ao_texture = ExtResource("2_jxcvg")
+heightmap_enabled = true
+heightmap_texture = ExtResource("4_kqvfh")
+uv1_scale = Vector3(0.135, 0.135, 0.135)
+uv1_triplanar = true

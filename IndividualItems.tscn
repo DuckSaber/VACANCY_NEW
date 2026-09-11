@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://cypbuyyfmqxwe"]
+
+[ext_resource type="ArrayMesh" uid="uid://fqke4dcio1j0" path="res://Meshes/Frames/FrameBack.obj" id="1_33yqm"]
+[ext_resource type="Texture2D" uid="uid://cgu7wfygnu7b" path="res://Meshes/Frames/Poliigon_CorkRandom_9251_BaseColor.jpg" id="2_mridq"]
+[ext_resource type="Texture2D" uid="uid://dh752dqqhdgww" path="res://Meshes/Frames/Poliigon_MetalTitaniumCast_13312_BaseColor.jpg" id="3_leh50"]
+[ext_resource type="Texture2D" uid="uid://eooq3fe0wm7t" path="res://Meshes/Frames/Poliigon_MetalTitaniumCast_13312_Metallic.jpg" id="4_g7513"]
+[ext_resource type="Texture2D" uid="uid://d2bnclu2sko6v" path="res://Meshes/Frames/Poliigon_MetalTitaniumCast_13312_Roughness.jpg" id="5_2pamj"]
+[ext_resource type="ArrayMesh" uid="uid://dpa5p6x2o8cs3" path="res://Meshes/Frames/Frame1Picture.obj" id="6_j07k7"]
+[ext_resource type="Texture2D" uid="uid://bu3a1ysv7wt43" path="res://Meshes/Frames/jochen-van-wylick-ex0pl-zo7NM-unsplash.jpg" id="7_keyxb"]
+[ext_resource type="ArrayMesh" uid="uid://cjhgkvk8iy6ic" path="res://Meshes/Frames/Frame1.obj" id="8_7ei2k"]
+[ext_resource type="Texture2D" uid="uid://baqgwxo2nwrju" path="res://Meshes/Frames/VeneerRedDark001_COL_1K_METALNESS.png" id="9_3yyn6"]
+[ext_resource type="Script" uid="uid://dvqarsqv1qwvi" path="res://Scripts/Hotspot.gd" id="10_mridq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02eg7"]
+albedo_texture = ExtResource("2_mridq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agb5h"]
+albedo_texture = ExtResource("3_leh50")
+metallic = 1.0
+metallic_texture = ExtResource("4_g7513")
+roughness_texture = ExtResource("5_2pamj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kd4hw"]
+cull_mode = 2
+albedo_texture = ExtResource("7_keyxb")
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dn8dr"]
+cull_mode = 2
+albedo_texture = ExtResource("9_3yyn6")
+
+[sub_resource type="Animation" id="Animation_33yqm"]
+length = 1.1333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FrameBack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.06),
+"transitions": PackedFloat32Array(0.4506255, 0.4506255),
+"update": 0,
+"values": [Vector3(5.710125e-05, 0.0007147491, 9.250641e-05), Vector3(-1.68, 0.001, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FrameBack:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.23333333, 1.06),
+"transitions": PackedFloat32Array(0.22531256, 0.22531256),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.31415927)]
+}
+
+[sub_resource type="Animation" id="Animation_mridq"]
+resource_name = "remove_back"
+length = 1.0666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FrameBack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(3.3635848, 3.3635848),
+"update": 0,
+"values": [Vector3(5.710125e-05, 0.0007147491, 9.250641e-05), Vector3(-1.09, 0.001, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FrameBack:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.08, 0.41),
+"transitions": PackedFloat32Array(3.3635848, 3.3635848),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.2443461)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_leh50"]
+_data = {
+&"RESET": SubResource("Animation_33yqm"),
+&"remove_back": SubResource("Animation_mridq")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kk6c7"]
+size = Vector3(0.108947754, 0.42459106, 0.60491943)
+
+[node name="PhotoFrame" type="Node3D" unique_id=526562546]
+
+[node name="FrameBack" type="MeshInstance3D" parent="." unique_id=1214954125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.710125e-05, 0.0007147491, 9.250641e-05)
+mesh = ExtResource("1_33yqm")
+surface_material_override/0 = SubResource("StandardMaterial3D_02eg7")
+surface_material_override/1 = SubResource("StandardMaterial3D_agb5h")
+
+[node name="Frame1Picture" type="MeshInstance3D" parent="." unique_id=580473724]
+mesh = ExtResource("6_j07k7")
+surface_material_override/0 = SubResource("StandardMaterial3D_kd4hw")
+
+[node name="Frame1" type="MeshInstance3D" parent="." unique_id=1428528586]
+mesh = ExtResource("8_7ei2k")
+surface_material_override/0 = SubResource("StandardMaterial3D_dn8dr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1499507191]
+libraries/ = SubResource("AnimationLibrary_leh50")
+
+[node name="InspectionHotspot" type="StaticBody3D" parent="." unique_id=320914168]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("10_mridq")
+
+[node name="BackPanel" type="CollisionShape3D" parent="InspectionHotspot" unique_id=1383607770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.042306334, 0.007003784, -0.0018005371)
+shape = SubResource("BoxShape3D_kk6c7")

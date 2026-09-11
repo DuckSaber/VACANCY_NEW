@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://sa8wbqgvuu1"]
+
+[ext_resource type="Script" uid="uid://cjhkb7l2l3qpg" path="res://ItemInspector.gd" id="1_ob7k7"]
+[ext_resource type="Shader" uid="uid://c7su0fpi7pml1" path="res://itemInspector.gdshader" id="2_nmde3"]
+[ext_resource type="Theme" uid="uid://crqi2clffhlk0" path="res://TEXT.tres" id="2_ob7k7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kk6c7"]
+shader = ExtResource("2_nmde3")
+shader_parameter/blur_amount = 2.0
+
+[node name="ItemInspector" type="CanvasLayer" unique_id=1261522562]
+script = ExtResource("1_ob7k7")
+
+[node name="BackgroundBlur" type="ColorRect" parent="." unique_id=973278909]
+material = SubResource("ShaderMaterial_kk6c7")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InspectionBackground" type="ColorRect" parent="." unique_id=768439976]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19607843, 0.19607843, 0.19607843, 0)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1770782096]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1177016166]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(2560, 1440)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1539883196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18884611, 1)
+
+[node name="ItemHolder" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1564719340]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=213523652]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 1.4142436, 1.847579)
+
+[node name="Label" type="Label" parent="." unique_id=1889932784]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -65.0
+offset_right = 436.0
+grow_vertical = 0
+theme = ExtResource("2_ob7k7")
+theme_override_colors/font_color = Color(1, 0.52156866, 0.22745098, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5803922)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 51
+text = "[ESC] Return"
+
+[node name="ItemDescription" type="Label" parent="." unique_id=1197227983]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.019000001
+anchor_right = 0.5
+anchor_bottom = 0.019000001
+offset_left = -150.0
+offset_top = 1225.64
+offset_right = 151.0
+offset_bottom = 1279.64
+grow_horizontal = 2
+theme = ExtResource("2_ob7k7")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5803922)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 34
+
+[node name="ItemName" type="Label" parent="." unique_id=25152579]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 106.0
+offset_right = 150.5
+offset_bottom = 160.0
+grow_horizontal = 2
+theme = ExtResource("2_ob7k7")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5803922)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 70

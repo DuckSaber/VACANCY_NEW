@@ -1,0 +1,33 @@
+# Blender 5.2.0 LTS MTL File: 'VacancyObjects.blend'
+# www.blender.org
+
+newmtl Material.001
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pr 0.010574
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd jochen-van-wylick-ex0pl-zo7NM-unsplash.jpg
+
+newmtl PaperFolded006_1K
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pr 0.500000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Pm PaperFolded006_REFL_1K.jpg
+map_Bump -bm 1.000000 PaperFolded006_NRM_1K.jpg

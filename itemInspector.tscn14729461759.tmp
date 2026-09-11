@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://sa8wbqgvuu1"]
+
+[ext_resource type="Script" uid="uid://cjhkb7l2l3qpg" path="res://ItemInspector.gd" id="1_ob7k7"]
+
+[node name="ItemInspector" type="CanvasLayer" unique_id=1261522562]
+script = ExtResource("1_ob7k7")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1770782096]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1177016166]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(2560, 1440)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1539883196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18884611, 1)
+
+[node name="ItemHolder" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1564719340]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=213523652]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 1.4142436, 1.847579)

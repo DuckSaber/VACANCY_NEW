@@ -1,0 +1,58 @@
+# Blender 5.2.0 LTS MTL File: 'VacancyObjects.blend'
+# www.blender.org
+
+newmtl Material.001
+Ns 978.963867
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Jack Ward/Downloads/jochen-van-wylick-ex0pl-zo7NM-unsplash.jpg
+
+newmtl Material.003
+Ns 797.595093
+Ka 0.974843 0.974843 0.974843
+Kd 0.206402 0.206402 0.206402
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+
+newmtl Poliigon_CorkRandom_9251_1K
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/Poliigon_CorkRandom_9251/1K/Poliigon_CorkRandom_9251_BaseColor.jpg
+map_Ns C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/Poliigon_CorkRandom_9251/1K/Poliigon_CorkRandom_9251_Roughness.jpg
+map_refl C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/Poliigon_CorkRandom_9251/1K/Poliigon_CorkRandom_9251_Metallic.jpg
+map_Bump -bm 6.100000 C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/Poliigon_CorkRandom_9251/1K/Poliigon_CorkRandom_9251_Normal.png
+
+newmtl Poliigon_MetalTitaniumCast_13312_256
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/Poliigon_MetalTitaniumCast_13312/256/Poliigon_MetalTitaniumCast_13312_BaseColor.jpg
+map_Ns C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/Poliigon_MetalTitaniumCast_13312/256/Poliigon_MetalTitaniumCast_13312_Roughness.jpg
+map_refl C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/Poliigon_MetalTitaniumCast_13312/256/Poliigon_MetalTitaniumCast_13312_Metallic.jpg
+map_Bump -bm 1.000000 C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/Poliigon_MetalTitaniumCast_13312/256/Poliigon_MetalTitaniumCast_13312_Normal.png
+
+newmtl VeneerRedDark001_1K
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/VeneerRedDark001/VeneerRedDark001_COL_1K_METALNESS.png
+map_Ns C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/VeneerRedDark001/VeneerRedDark001_ROUGHNESS_1K_METALNESS.png
+map_refl C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/VeneerRedDark001/VeneerRedDark001_METALNESS_1K_METALNESS.png
+map_d C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/VeneerRedDark001/VeneerRedDark001_MASK_1K_METALNESS.png
+map_Bump -bm 1.000000 C:/Users/Jack Ward/Desktop/Blender/Add-ons/Poliigon2/VeneerRedDark001/VeneerRedDark001_NRM16_1K_METALNESS.png

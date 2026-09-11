@@ -1,0 +1,86 @@
+# Blender 5.2.0 LTS MTL File: 'None'
+# www.blender.org
+
+newmtl bottle_inside
+Ns 694.973877
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.105373
+illum 6
+
+newmtl bottleexport_baked_material
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.038300 0.038300 0.038300
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.263910
+illum 9
+map_Bump -bm 1.000000 bottleexport_baked_material_normal.jpeg
+
+newmtl capexport_baked_material
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd capexport_baked_material_baseColor.jpeg
+map_Bump -bm 1.000000 capexport_baked_material_normal.jpeg
+
+newmtl fond
+Ns 1.788855
+Ka 1.000000 1.000000 1.000000
+Kd 0.099012 0.176260 0.352606
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl material
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl plaqueexport_baked_material
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd plaqueexport_baked_material_baseColor.jpeg
+map_Bump -bm 1.000000 plaqueexport_baked_material_normal.jpeg
+
+newmtl supportexport_baked_material.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd supportexport_baked_material.001_baseColor.jpeg
+map_Bump -bm 1.000000 supportexport_baked_material.001_normal.jpeg
+
+newmtl veliero001_baked_material
+Ns 1.788855
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd veliero001_baked_material_baseColor.jpeg

@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://c1nlwery4x2ns"]
+
+[ext_resource type="Texture2D" uid="uid://dplaq4iigmfdr" path="res://texture_01.png" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dgffbt3dufwy7" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cxcoydr6mdmn1" path="res://Scripts/interactable.gd" id="3_h2yge"]
+[ext_resource type="FontFile" uid="uid://baxhsd4r4e8w8" path="res://Scripts/Satoshi-Variable.ttf" id="4_1bvp3"]
+[ext_resource type="ArrayMesh" uid="uid://t1r5hg84bpcg" path="res://craneo.OBJ" id="5_lquwl"]
+[ext_resource type="Shader" uid="uid://c683je4ggik1g" path="res://main.gdshader" id="6_7mycd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kk6c7"]
+size = Vector3(50, 0.5, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_noh11"]
+albedo_color = Color(0.3553136, 0.35531354, 0.35531357, 1)
+albedo_texture = ExtResource("1_0xm2m")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_kk6c7"]
+material = SubResource("StandardMaterial3D_noh11")
+size = Vector3(50, 0.5, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_noh11"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2l8ng"]
+size = Vector3(1.237915, 1.1376953, 1.145752)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_noh11"]
+
+[sub_resource type="Theme" id="Theme_kk6c7"]
+default_font = ExtResource("4_1bvp3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lquwl"]
+render_priority = 0
+shader = ExtResource("6_7mycd")
+shader_parameter/outline_color = Color(1, 0.8, 0.3, 1)
+shader_parameter/outline_size = 0.03
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c3pxu"]
+radius = 0.2
+
+[node name="Main" type="Node3D" unique_id=1118502368]
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=1727932154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.26163626, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1033954199]
+shape = SubResource("BoxShape3D_kk6c7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/CollisionShape3D" unique_id=1217684598]
+mesh = SubResource("BoxMesh_kk6c7")
+
+[node name="CharacterBody3D" parent="." unique_id=154127529 instance=ExtResource("1_ig7tw")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=118035383]
+transform = Transform3D(1, 0, 0, 0, -0.8682559, 0.49611652, 0, -0.49611652, -0.8682559, 0, 10.275294, -15.190325)
+light_color = Color(0.9228109, 0.8018432, 0.5673746, 1)
+light_energy = 4.259
+
+[node name="Interactable" type="Node3D" parent="." unique_id=1223970453]
+
+[node name="TestObject" type="StaticBody3D" parent="Interactable" unique_id=1386202685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.086133, 4.146631)
+script = ExtResource("3_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interactable/TestObject" unique_id=176615196]
+mesh = SubResource("BoxMesh_noh11")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable/TestObject" unique_id=51512119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.038757324, -0.01585102, -0.006713867)
+shape = SubResource("BoxShape3D_2l8ng")
+
+[node name="TestObject2" type="StaticBody3D" parent="Interactable" unique_id=2087256302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.683656, 0.54245496, 1.5425549)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interactable/TestObject2" unique_id=866798023]
+mesh = SubResource("BoxMesh_noh11")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable/TestObject2" unique_id=1702686990]
+shape = SubResource("BoxShape3D_noh11")
+
+[node name="NodeUI" type="Node3D" parent="." unique_id=178804650]
+
+[node name="UIOverlay" type="CanvasLayer" parent="NodeUI" unique_id=1058707339]
+
+[node name="CenterContainer" type="CenterContainer" parent="NodeUI/UIOverlay" unique_id=752331492]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InteractionPrompt" type="Label" parent="NodeUI/UIOverlay/CenterContainer" unique_id=533518791]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_kk6c7")
+theme_override_colors/font_color = Color(0.9999997, 0.5200174, 0.22550717, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5803922)
+theme_override_colors/font_outline_color = Color(0.23753911, 0.23753914, 0.23753911, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 33
+text = "[E]    Inspect"
+uppercase = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1071157900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.676285, 1.2404058, 1.5258675)
+script = ExtResource("3_h2yge")
+
+[node name="Skull" type="MeshInstance3D" parent="StaticBody3D" unique_id=2088868461]
+transform = Transform3D(-0.0010162927, 0, 0.14999655, 0, 0.14999999, 0, -0.14999655, 0, -0.0010162927, 0, 0, 0)
+mesh = ExtResource("5_lquwl")
+
+[node name="HighlightMesh" type="MeshInstance3D" parent="StaticBody3D" unique_id=816215496]
+transform = Transform3D(-0.0010162927, 0, 0.14999655, 0, 0.14999999, 0, -0.14999655, 0, -0.0010162927, 0, 0, 0)
+mesh = ExtResource("5_lquwl")
+surface_material_override/0 = SubResource("ShaderMaterial_lquwl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=597952603]
+shape = SubResource("SphereShape3D_c3pxu")
